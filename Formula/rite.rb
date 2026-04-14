@@ -5,13 +5,13 @@
 class Rite < Formula
   desc "Task runner with Unix-native variable precedence (hard fork of go-task)."
   homepage "https://github.com/clintmod/rite"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_darwin_amd64.tar.gz"
-      sha256 "1a38f6465d2b77f7b1facf45708d3de474d39a9ccb221717e3af40ca23b1800d"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.1/rite_darwin_amd64.tar.gz"
+      sha256 "8360ffe9c9b8078bedb0a2880dc533e52307b5dadfed4e516e9b21a29f86cfe9"
 
       define_method(:install) do
         bin.install "rite"
@@ -21,8 +21,8 @@ class Rite < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_darwin_arm64.tar.gz"
-      sha256 "f153b1270e490f15cf482e9f38a7692af73bc59f68b30a73b9ca6f600b1364d2"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.1/rite_darwin_arm64.tar.gz"
+      sha256 "03568280d540f94a1c19cc54e21d1dd2cff102bfb339a6c503e2e9ad96e4e37b"
 
       define_method(:install) do
         bin.install "rite"
@@ -35,8 +35,8 @@ class Rite < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_linux_amd64.tar.gz"
-      sha256 "8abab9204520bafa6615d23ab665405d01e8c63d778ea8ae77d627f2e41a9db4"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.1/rite_linux_amd64.tar.gz"
+      sha256 "c55e8f6f03c6013f50a82fa4a1266a44f329a8b7d009be0c2796dd789d8173c5"
       define_method(:install) do
         bin.install "rite"
         bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
@@ -45,8 +45,8 @@ class Rite < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_linux_arm.tar.gz"
-      sha256 "4b711bdbb86b366b3ca318ee6b6f1d8127339f24fe7726a7279ee42b67785225"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.1/rite_linux_arm.tar.gz"
+      sha256 "93cc7085428cc2c33336b21fbff948818d65d53e89bf8521ea54f63807d81f19"
       define_method(:install) do
         bin.install "rite"
         bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
@@ -55,8 +55,8 @@ class Rite < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_linux_arm64.tar.gz"
-      sha256 "1f5217a32943230042dd6d1b04e8b6655ea93adb9117df94fcf21a4e27a42b34"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.1/rite_linux_arm64.tar.gz"
+      sha256 "35858adf5f5f893bb1118daf062edf8149a6b12dc97f0ae74ad7a1173e086757"
       define_method(:install) do
         bin.install "rite"
         bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
