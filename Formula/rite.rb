@@ -5,63 +5,63 @@
 class Rite < Formula
   desc "Task runner with Unix-native variable precedence (hard fork of go-task)."
   homepage "https://github.com/clintmod/rite"
-  version "0.1.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clintmod/rite/releases/download/v0.1.0/rite_darwin_amd64.tar.gz"
-      sha256 "7decd08e1ac6fa5a2c4a1d10e322e944a105d4425ce0f7632882d84347f5655f"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_darwin_amd64.tar.gz"
+      sha256 "1a38f6465d2b77f7b1facf45708d3de474d39a9ccb221717e3af40ca23b1800d"
 
       define_method(:install) do
         bin.install "rite"
-        bash_completion.install "completion/bash/task.bash" => "rite"
-        zsh_completion.install "completion/zsh/_task" => "_rite"
-        fish_completion.install "completion/fish/task.fish" => "rite.fish"
+        bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
+        zsh_completion.install "internal/task/completion/zsh/_task" => "_rite"
+        fish_completion.install "internal/task/completion/fish/task.fish" => "rite.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clintmod/rite/releases/download/v0.1.0/rite_darwin_arm64.tar.gz"
-      sha256 "87383b1bdf324186972177707a026394599cf7afd7aeef1e8e8180e175e17a30"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_darwin_arm64.tar.gz"
+      sha256 "f153b1270e490f15cf482e9f38a7692af73bc59f68b30a73b9ca6f600b1364d2"
 
       define_method(:install) do
         bin.install "rite"
-        bash_completion.install "completion/bash/task.bash" => "rite"
-        zsh_completion.install "completion/zsh/_task" => "_rite"
-        fish_completion.install "completion/fish/task.fish" => "rite.fish"
+        bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
+        zsh_completion.install "internal/task/completion/zsh/_task" => "_rite"
+        fish_completion.install "internal/task/completion/fish/task.fish" => "rite.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clintmod/rite/releases/download/v0.1.0/rite_linux_amd64.tar.gz"
-      sha256 "e21ef4451fe55a488a12cda4378151915a428460db7edfa416a803074624960c"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_linux_amd64.tar.gz"
+      sha256 "8abab9204520bafa6615d23ab665405d01e8c63d778ea8ae77d627f2e41a9db4"
       define_method(:install) do
         bin.install "rite"
-        bash_completion.install "completion/bash/task.bash" => "rite"
-        zsh_completion.install "completion/zsh/_task" => "_rite"
-        fish_completion.install "completion/fish/task.fish" => "rite.fish"
+        bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
+        zsh_completion.install "internal/task/completion/zsh/_task" => "_rite"
+        fish_completion.install "internal/task/completion/fish/task.fish" => "rite.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/clintmod/rite/releases/download/v0.1.0/rite_linux_arm.tar.gz"
-      sha256 "a0eff6324138f36744e93ba508a30303ea05f8fbfa75fe685e9fc057e09e4556"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_linux_arm.tar.gz"
+      sha256 "4b711bdbb86b366b3ca318ee6b6f1d8127339f24fe7726a7279ee42b67785225"
       define_method(:install) do
         bin.install "rite"
-        bash_completion.install "completion/bash/task.bash" => "rite"
-        zsh_completion.install "completion/zsh/_task" => "_rite"
-        fish_completion.install "completion/fish/task.fish" => "rite.fish"
+        bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
+        zsh_completion.install "internal/task/completion/zsh/_task" => "_rite"
+        fish_completion.install "internal/task/completion/fish/task.fish" => "rite.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clintmod/rite/releases/download/v0.1.0/rite_linux_arm64.tar.gz"
-      sha256 "a1326c9f5e774e40454fb0480832d4f247936bf3a1b51d40d39d8c0fbe655d0e"
+      url "https://github.com/clintmod/rite/releases/download/v1.0.0/rite_linux_arm64.tar.gz"
+      sha256 "1f5217a32943230042dd6d1b04e8b6655ea93adb9117df94fcf21a4e27a42b34"
       define_method(:install) do
         bin.install "rite"
-        bash_completion.install "completion/bash/task.bash" => "rite"
-        zsh_completion.install "completion/zsh/_task" => "_rite"
-        fish_completion.install "completion/fish/task.fish" => "rite.fish"
+        bash_completion.install "internal/task/completion/bash/task.bash" => "rite"
+        zsh_completion.install "internal/task/completion/zsh/_task" => "_rite"
+        fish_completion.install "internal/task/completion/fish/task.fish" => "rite.fish"
       end
     end
   end
